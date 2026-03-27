@@ -60,34 +60,33 @@ export const HeroSection = () => {
         </button>
 
         {/* Center Logo */}
-        <span className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 text-2xl font-bold tracking-wider text-foreground">
-          
+        <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 text-2xl font-bold tracking-wider text-foreground">
           TCS
-        </span>
+        </a>
 
         {/* Right nav links (desktop only) */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="#"
+            href="/about"
             className="px-4 py-2 rounded-full border border-foreground/30 text-foreground text-xs font-medium uppercase tracking-widest hover:bg-foreground/10 transition-colors"
           >
             About Us
           </a>
           <a
-            href="#"
+            href="/tournaments"
             className="px-4 py-2 rounded-full border border-foreground/30 text-foreground text-xs font-medium uppercase tracking-widest hover:bg-foreground/10 transition-colors"
           >
-            Services
+            Tournaments
           </a>
           <a
-            href="#"
+            href="/registration"
             className="px-5 py-2 rounded-full text-xs font-medium uppercase tracking-widest text-background transition-opacity hover:opacity-90"
             style={{
               background:
                 "linear-gradient(to right, hsl(220, 70%, 78%), hsl(40, 80%, 82%))",
             }}
           >
-            Get Started
+            Registration
           </a>
         </div>
       </nav>
@@ -103,34 +102,36 @@ export const HeroSection = () => {
         </div>
 
         {/* Heading + Stats */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-0">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-0 flex-1 lg:flex-none">
           {/* Heading */}
           <h1
             className="leading-[0.9] -tracking-[0.02em]"
-            style={{ letterSpacing: "-0.2em" }}
+            style={{ letterSpacing: "-0.05em" }}
           >
             <span
               className="block font-light text-foreground"
-              style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
+              style={{ fontSize: "clamp(4rem, 12vw, 6rem)" }}
             >
               Enter The
             </span>
             <span
               className="block font-light text-foreground"
-              style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
+              style={{ fontSize: "clamp(4rem, 12vw, 6rem)" }}
             >
               Ultimate
             </span>
             <span
               className="block font-display text-foreground"
-              style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
+              style={{ fontSize: "clamp(4rem, 12vw, 6rem)" }}
             >
               Arena
             </span>
           </h1>
 
           {/* Stats / Progress Circle */}
-          <ProgressCircle />
+          <div className="mt-auto lg:mt-0 pt-8 lg:pt-0">
+            <ProgressCircle />
+          </div>
         </div>
       </div>
 

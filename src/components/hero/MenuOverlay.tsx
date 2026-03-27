@@ -8,11 +8,11 @@ interface MenuOverlayProps {
 }
 
 const menuLinks = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Projects", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Tournaments", href: "/tournaments" },
+  { label: "Registration", href: "/registration" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const ease = [0.76, 0, 0.24, 1] as const;
@@ -35,9 +35,9 @@ export const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
       {isOpen && (
         <motion.div
           className="fixed inset-0 z-50 bg-foreground flex flex-col"
-          initial={{ clipPath: "circle(0% at 80px 40px)" }}
-          animate={{ clipPath: "circle(150% at 80px 40px)" }}
-          exit={{ clipPath: "circle(0% at 80px 40px)" }}
+          initial={{ clipPath: "circle(0% at 50% 0%)" }}
+          animate={{ clipPath: "circle(150% at 50% 0%)" }}
+          exit={{ clipPath: "circle(0% at 50% 0%)" }}
           transition={{ duration: 0.7, ease }}
         >
           {/* Nav bar inside overlay */}
@@ -54,18 +54,19 @@ export const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
             </button>
 
             {/* Center logo */}
-            <span className="absolute left-1/2 -translate-x-1/2 text-2xl font-bold tracking-wider text-background">
-              EVR
-            </span>
+            <a href="/" className="absolute left-1/2 -translate-x-1/2 text-2xl font-bold tracking-wider text-background">
+              TCS
+            </a>
           </div>
 
           {/* Menu links */}
-          <nav className="flex-1 flex flex-col justify-center px-8 md:px-16">
+          <div className="flex-1 overflow-y-auto">
+            <nav className="flex flex-col justify-center min-h-full px-8 md:px-16 py-8">
             {menuLinks.map((link, i) => (
               <motion.a
                 key={link.label}
                 href={link.href}
-                className="group flex items-center justify-between border-b border-background/10 py-4 md:py-5"
+                className="group flex items-center justify-between border-b border-background/10 py-3 md:py-4"
                 initial={{ opacity: 0, x: -60 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -60 }}
@@ -79,7 +80,7 @@ export const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
                 <span
                   className="text-background font-light transition-transform duration-200 group-hover:translate-x-1"
                   style={{
-                    fontSize: "clamp(2rem, 5vw, 4.5rem)",
+                    fontSize: "clamp(1.5rem, min(5vw, 6vh), 4.5rem)",
                     letterSpacing: "-0.06em",
                   }}
                 >
@@ -91,12 +92,13 @@ export const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
                 />
               </motion.a>
             ))}
-          </nav>
+            </nav>
+          </div>
 
           {/* Bottom bar */}
-          <div className="flex items-center justify-between px-8 md:px-16 pb-8 pt-4">
+          <div className="shrink-0 flex items-center justify-between px-8 md:px-16 pb-8 pt-4">
             <span className="text-background/40 text-xs tracking-[0.2em] uppercase">
-              Evolve Responsible Ventures
+              The Clutch Series
             </span>
             <span className="text-background/40 text-xs tracking-[0.2em] uppercase">
               © 2026
