@@ -56,6 +56,10 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html, body {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Geist', 'Inter', sans-serif;
