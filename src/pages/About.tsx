@@ -39,6 +39,7 @@ const About = () => {
             isVideoLoaded ? "opacity-100" : "opacity-0"
           }`}
           src="/background.mp4"
+          preload="auto"
           autoPlay
           muted
           loop

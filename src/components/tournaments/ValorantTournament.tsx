@@ -34,7 +34,7 @@ export function ValorantTournament() {
 
   return (
     <section className="relative w-full z-10 px-6 py-24 md:px-10 md:py-32">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12">
+      <div className="flex flex-col gap-12">
         
         {/* Header section with BlurFade */}
         <BlurFade delay={0.1} yOffset={20}>
@@ -77,10 +77,11 @@ export function ValorantTournament() {
                 alt="Valorant Tournament" 
                 className={`absolute inset-0 z-0 w-full h-full object-cover transition-all duration-700 ease-in-out pointer-events-none ${isMediaActive ? "opacity-0 scale-105" : "opacity-100 scale-100"}`}
               />
-              {/* Video — crossfades in on hover/tap */}
+              {/* Video — preloaded and crossfades in on hover/tap */}
               <video
                 ref={videoRef}
                 src="/Tournament.mp4"
+                preload="auto"
                 muted
                 loop
                 playsInline
