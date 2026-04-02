@@ -99,7 +99,7 @@ export function ValorantTournament() {
                     <span className="text-[10px] tracking-[0.25em] uppercase text-foreground/40 font-medium">Prize Pool</span>
                     <span className="text-3xl font-light text-foreground flex items-center gap-3">
                       <Trophy className="w-5 h-5 text-primary" />
-                      $150,000
+                      ₹5,000
                     </span>
                   </div>
                   
@@ -109,7 +109,7 @@ export function ValorantTournament() {
                     <span className="text-[10px] tracking-[0.25em] uppercase text-foreground/40 font-medium">Max Teams</span>
                     <span className="text-xl font-light text-foreground/80 flex items-center gap-3">
                       <Users className="w-4 h-4 text-foreground/50" />
-                      64 Slots
+                      12 team slots
                     </span>
                   </div>
                   
@@ -119,7 +119,7 @@ export function ValorantTournament() {
                     <span className="text-[10px] tracking-[0.25em] uppercase text-foreground/40 font-medium">Date</span>
                     <span className="text-xl font-light text-foreground/80 flex items-center gap-3">
                       <Calendar className="w-4 h-4 text-foreground/50" />
-                      Aug 12 - Aug 20, 2026
+                      To be announced
                     </span>
                   </div>
                 </div>
