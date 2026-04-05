@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="About The Clutch Series social image">
+  <rect width="1200" height="630" fill="#050505" />
+  <rect x="70" y="70" width="1060" height="490" fill="none" stroke="#20242f" stroke-width="2" />
+  <circle cx="1020" cy="180" r="150" fill="#9cacdd" opacity="0.14" />
+  <circle cx="150" cy="520" r="110" fill="#e4d7ae" opacity="0.12" />
+  <text x="96" y="130" fill="#9cacdd" font-size="24" font-family="Arial, Helvetica, sans-serif" letter-spacing="7">ABOUT THE CLUTCH SERIES</text>
+  <text x="96" y="280" fill="#f3f2ee" font-size="94" font-family="Arial, Helvetica, sans-serif" font-weight="300">Vision.</text>
+  <text x="96" y="380" fill="#f3f2ee" font-size="94" font-family="Arial, Helvetica, sans-serif" font-weight="300">Philosophy.</text>
+  <text x="96" y="490" fill="#e4d7ae" font-size="104" font-family="Georgia, serif">Team.</text>
+  <text x="98" y="550" fill="#d7d8dc" font-size="27" font-family="Arial, Helvetica, sans-serif">The people and standards behind a premium esports arena.</text>
+</svg>

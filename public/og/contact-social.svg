@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Contact social image">
+  <rect width="1200" height="630" fill="#050505" />
+  <circle cx="180" cy="160" r="140" fill="#9cacdd" opacity="0.12" />
+  <circle cx="1020" cy="500" r="180" fill="#e4d7ae" opacity="0.12" />
+  <text x="92" y="126" fill="#9cacdd" font-size="24" font-family="Arial, Helvetica, sans-serif" letter-spacing="7">CONTACT</text>
+  <text x="92" y="282" fill="#f3f2ee" font-size="96" font-family="Arial, Helvetica, sans-serif" font-weight="300">Partnerships.</text>
+  <text x="92" y="382" fill="#f3f2ee" font-size="96" font-family="Arial, Helvetica, sans-serif" font-weight="300">Teams.</text>
+  <text x="92" y="492" fill="#e4d7ae" font-size="102" font-family="Georgia, serif">Enquiries.</text>
+  <text x="94" y="554" fill="#d7d8dc" font-size="27" font-family="Arial, Helvetica, sans-serif">Reach The Clutch Series for sponsorships, team communication, and event collaboration.</text>
+</svg>

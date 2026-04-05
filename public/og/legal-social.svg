@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Legal and policy social image">
+  <rect width="1200" height="630" fill="#050505" />
+  <rect x="70" y="70" width="1060" height="490" fill="none" stroke="#262626" stroke-width="2" />
+  <text x="94" y="132" fill="#9cacdd" font-size="24" font-family="Arial, Helvetica, sans-serif" letter-spacing="7">POLICIES AND TERMS</text>
+  <text x="94" y="286" fill="#f3f2ee" font-size="92" font-family="Arial, Helvetica, sans-serif" font-weight="300">Privacy.</text>
+  <text x="94" y="388" fill="#f3f2ee" font-size="92" font-family="Arial, Helvetica, sans-serif" font-weight="300">Terms.</text>
+  <text x="94" y="494" fill="#e4d7ae" font-size="98" font-family="Georgia, serif">Cookies.</text>
+  <text x="96" y="552" fill="#d7d8dc" font-size="27" font-family="Arial, Helvetica, sans-serif">Clear trust, compliance, and website policy information for visitors and participants.</text>
+</svg>
