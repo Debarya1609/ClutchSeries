@@ -5,7 +5,11 @@ import express from "express";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isProduction = process.env.NODE_ENV === "production";
 const port = Number(process.env.PORT || 5173);
-const isDirectRun = process.argv[1] === fileURLToPath(import.meta.url);
+const invokedPath = process.argv[1] ? path.resolve(process.argv[1]) : "";
+const currentFilePath = fileURLToPath(import.meta.url);
+const currentFileStem = currentFilePath.replace(/\.js$/, "");
+const invokedStem = invokedPath.replace(/\.js$/, "");
+const isDirectRun = invokedPath === currentFilePath || invokedStem === currentFileStem;
 const knownRoutes = new Set([
   "/",
   "/about",
@@ -78,6 +82,11 @@ async function createApp() {
 
       next(error);
     }
+  });
+
+  app.use((error, _req, res, _next) => {
+    console.error(error);
+    res.status(500).type("text/plain").send("Internal server error");
   });
 
   return app;
