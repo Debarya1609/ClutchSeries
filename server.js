@@ -5,6 +5,7 @@ import express from "express";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isProduction = process.env.NODE_ENV === "production";
 const port = Number(process.env.PORT || 5173);
+const isDirectRun = process.argv[1] === fileURLToPath(import.meta.url);
 const knownRoutes = new Set([
   "/",
   "/about",
@@ -16,9 +17,7 @@ const knownRoutes = new Set([
   "/cookie-policy",
 ]);
 
-startServer();
-
-async function startServer() {
+async function createApp() {
   const app = express();
   let viteDevServer;
 
@@ -80,6 +79,27 @@ async function startServer() {
       next(error);
     }
   });
+
+  return app;
+}
+
+let appPromise;
+
+function getApp() {
+  if (!appPromise) {
+    appPromise = createApp();
+  }
+
+  return appPromise;
+}
+
+export default async function handler(req, res) {
+  const app = await getApp();
+  return app(req, res);
+}
+
+if (isDirectRun) {
+  const app = await getApp();
 
   app.listen(port, () => {
     console.log(

@@ -1,8 +1,13 @@
 {
-  "rewrites": [
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/**"
+    }
+  },
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "dest": "/api/index.js"
     }
   ],
   "headers": [
